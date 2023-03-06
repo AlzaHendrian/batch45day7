@@ -1,0 +1,144 @@
+// Object Oriented Programming : sudut pandang bahasa pemrograman yang berkonsep object.
+
+            // CLASS
+// class = blueprint, prototype atau cetakan untuk membuat object. / untuk menyimpan properties dan method
+
+// constructor: untuk menampung data berupa parameter yg nantinya akan dilempar ke object menggunakan argument. untuk menginisialisasi data awal menggunakan parameter.
+
+            // OBJECT
+// object mempunya sebuah variabel baru yg menampung sebuah keyword new dan menampung argument
+// keyword new digunakan untuk membuat sebuah instance dari sebuah kelas atau array.
+
+
+            // INHERITANCE
+//inheritance (pewarisan atau keturunan) : adalah konsep pemrograman dimana sebuah class dapat menurunkan properti dan method yang dimiliki class sebelumnya (parrentnya atau orangtua atau induk class
+// Extends: berupa keyword yg harus ditambahkan pada definisi class yg akan menjadi subclass
+// subclass: adalah class anak atau turunan secara hirarki dari superClass
+// superClass: adalah parent atau orangtua atau class dasar dari subclass
+// super: keyword yg digunakan untuk mengakses atau memanggil konstruktor berupa properti/parameter dari superClass atau singkatnya menjadi variabel yang mengacu pada superClass
+
+// contohnya :
+// class Car {
+//     constructor(make, model){
+//         this.make = make
+//         this.model = model
+//     }
+//     getInfoSClass() {
+//         return `${this.make} ${this.model}`
+//     }
+// }
+
+
+// class Car1 extends Car {
+//     constructor(make, model, baterry){
+//         super(make, model)
+//         this.type = type
+//     }
+//     getInfo() {
+//         return `${super.getInfoSClass()} ${this.baterry}`
+//     }
+// }
+
+// let myCar1 = new Car1("Tesla", "X234", 100)
+// console.log(myCar1.getInfo())
+
+
+// penjelasan :
+// class Car = superClass
+// class Car1 = subClass
+
+// ${super.getInfoSClass()} yg ada didalam fungsi getInfo pada class Car1 berisikan string yg ada didalam class Car // parrentnya. menggunakan keyword super untuk mengakses string atau isi dari fungsi yg ada didalam class parrentnya
+
+
+            // POLYMORPHISM
+// polymorphism : konsep dimana suatu object berbeda beda dapat di akses melalui satu interface / konsep dimana interface tunggal dapat digunakan pada entity yang berbeda beda
+
+
+                //ABSTRACTION
+// abstraction : cara menyembunyikan detail implementasi dan hanya menampilkan fungsionalitas kepada pengguna. Dengan kata lain, itu mengabaikan detail yang tidak relevan dan hanya menampilkan yang diperlukan.
+
+// function didalam class harus tidak menggunakan key function tetapi langsung nama dari functionnya
+// contohnya: get getInfo (){}
+
+// getter dan setter
+
+// menggunakan return didalam get fungsi atau get function
+
+
+                // ENCAPSULATION
+// andescore (_) setelah kata kunci this digunakan untuk memberitahu kalau properti tidak boleh diakses secara langsung atau privat.
+// this = variabel global atau variabel yg bisa diakses secara global scope
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Car {
+//     constructor(type, model) {
+//         this.type = type
+//         this.model = model
+//     }
+//     getInfo() {
+//         return `ini adalah mobil bertipe ${this.type} dengan model ${this.model}`
+//     }
+// }
+// class mobil extends Car {
+//     constructor(type, model, merk) {
+//         super(type, model);
+//         this.merk = merk
+//     }
+//     infoMasseh() {
+//         return `${this.merk}, ini adalah mobil bertipe ${this.type} dengan model ${this.model}`
+//     }
+// }
+
+
+// let myCar = new Car('Xpander', '708AA1')
+// console.log(myCar.getInfo())
+
+// let spekCar = new mobil('Xpander', '708AA1', 'Toyota')
+// console.log(spekCar.infoMasseh())
+
+// class Cars {
+//     constructor(merk, type, model) {
+//         this.merk = merk
+//         this.type = type
+//         this.model = model
+//     }
+
+//     specsCar() {
+//         return `mobil merk: ${this.merk}, dengan type: ${this.type} dan model ${this.model}`
+//     }
+// }
+
+// const car1 = new Cars('Toyota', 'wulling', '20A4bA')
+// const car2 = new Cars('Honda', 'Brio', '774bAc')
+// const car3 = new Cars('Daihatsu', 'Xenia', '17Asadd')
+
+// console.log(car1.specsCar())
+// console.log(car2.specsCar())
+// console.log(car3.specsCar())
